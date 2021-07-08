@@ -117,7 +117,7 @@
       [:div {:id "loader"}]
       [:div {:class "loader-section section-left"}]
       [:div {:class "loader-section section-right"}]]
-     [:script {:src "/website/out/main.js"}]]))
+     [:script {:src "/out/main.js"}]]))
 
 (defn write-html-to-file [file]
   (spit file (render-html)))
