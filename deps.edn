@@ -1,0 +1,4 @@
+{:deps {org.clojure/clojure       {:mvn/version "1.10.3"}
+        org.clojure/clojurescript {:mvn/version "1.10.866"}
+        hiccup/hiccup             {:mvn/version "1.0.5"}}
+ :aliases {:build-html {:exec-fn website.html/write-to-index-html}}}
