@@ -74,7 +74,7 @@
               [:p {:class "desc-1-p"}
                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                ]]]]]]]
-        [:div {:class "col-xl-8 col-12 main-item" :id "desc" :data-page-no "2"}
+        [:div {:class "col-xl-8 col-12 main-item hidden" :id "exp" :data-page-no "2"}
          [:div {:class "desc"}
           [:div {:class "desc-container"}
            [:div {:class "desc-item-top"}
@@ -91,7 +91,7 @@
               [:p {:class "desc-1-p"}
                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                ]]]]]]]
-        [:div {:class "col-xl-8 col-12 main-item" :id "desc" :data-page-no "4"}
+        [:div {:class "col-xl-8 col-12 main-item hidden" :id "team" :data-page-no "4"}
          [:div {:class "desc"}
           [:div {:class "desc-container"}
            [:div {:class "desc-item-top"}

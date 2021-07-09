@@ -52,7 +52,7 @@ body, html {
   color: inherit !important;
 }
 .menu-item-wrap .menu-item a .span-r {
-  transition: opacity .25s ease-in;
+  transition: color .25s ease-in;
   font-size: 1.375rem;
   line-height: 2.125rem;
   font-family: LeagueGothic;
@@ -77,6 +77,9 @@ body, html {
 @media only screen and (max-width: 1200px) {
   .menu-item {
     text-align: center;
+  }
+  .menu {
+    border-right-width: 0px;
   }
 }
 /*
