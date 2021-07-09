@@ -69,9 +69,13 @@ body, html {
 @media only screen and (min-width: 1200px) {
   .main-item {
     min-height: 100vh;
+    padding-top: 5rem;
   }
   .menu-item {
     padding-left: 3rem;
+  }
+  .menu {
+    padding-top: 6rem;
   }
 }
 @media only screen and (max-width: 1200px) {
