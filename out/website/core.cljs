@@ -37,12 +37,12 @@
     "selected"))
 
 (defn open-page [no]
-  (dom-classlist/remove (first (.querySelectorAll js/document (str ".main[data-page-no=\"" no "\"]"))) "hidden")
-  (fadein (first (.querySelectorAll js/document (str ".main[data-page-no=\"" no "\"]")))))
+  (dom-classlist/remove (first (.querySelectorAll js/document (str ".main-item[data-page-no=\"" no "\"]"))) "hidden")
+  (fadein (first (.querySelectorAll js/document (str ".main-item[data-page-no=\"" no "\"]")))))
 
 (defn change-page [event]
   (let [no (.-no (.-dataset (.-currentTarget event)))]
-    (hide-all-elements (.getElementsByClassName js/document "main main-item"))
+    (hide-all-elements (.getElementsByClassName js/document "main-item"))
     ;(hide-all-projects (.getElementsByClassName js/document "main main-project"))
     (highlight-menu no)
     (open-page no)))

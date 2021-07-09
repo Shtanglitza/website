@@ -39,13 +39,13 @@ goog.dom.classlist.remove(cljs.core.last.call(null,elements_528),"selected");
 return goog.dom.classlist.add(cljs.core.first.call(null,document.querySelectorAll([".menu-item-link[data-no='",cljs.core.str.cljs$core$IFn$_invoke$arity$1(no),"']"].join(''))),"selected");
 });
 website.core.open_page = (function website$core$open_page(no){
-goog.dom.classlist.remove(cljs.core.first.call(null,document.querySelectorAll([".main[data-page-no=\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(no),"\"]"].join(''))),"hidden");
+goog.dom.classlist.remove(cljs.core.first.call(null,document.querySelectorAll([".main-item[data-page-no=\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(no),"\"]"].join(''))),"hidden");
 
-return website.core.fadein.call(null,cljs.core.first.call(null,document.querySelectorAll([".main[data-page-no=\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(no),"\"]"].join(''))));
+return website.core.fadein.call(null,cljs.core.first.call(null,document.querySelectorAll([".main-item[data-page-no=\"",cljs.core.str.cljs$core$IFn$_invoke$arity$1(no),"\"]"].join(''))));
 });
 website.core.change_page = (function website$core$change_page(event){
 var no = event.currentTarget.dataset.no;
-website.core.hide_all_elements.call(null,document.getElementsByClassName("main main-item"));
+website.core.hide_all_elements.call(null,document.getElementsByClassName("main-item"));
 
 website.core.highlight_menu.call(null,no);
 
