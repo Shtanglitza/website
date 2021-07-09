@@ -14,8 +14,8 @@
 (defn hide-all-elements [elements]
   (dom-classlist/add (first elements) "hidden")
   (dom-classlist/add (second elements) "hidden")
-  (dom-classlist/add (second (rest elements)) "hidden")
-  (dom-classlist/add (second (rest (rest elements))) "hidden")
+  ;(dom-classlist/add (second (rest elements)) "hidden")
+  ;(dom-classlist/add (second (rest (rest elements))) "hidden")
   (dom-classlist/add (last elements) "hidden"))
 
 (defn hide-all-projects [elements]
@@ -37,13 +37,13 @@
     "selected"))
 
 (defn open-page [no]
-  (dom-classlist/remove (first (.querySelectorAll js/document (str ".main[data-page-no=\"" no "\"]"))) "hidden")
-  (fadein (first (.querySelectorAll js/document (str ".main[data-page-no=\"" no "\"]")))))
+  (dom-classlist/remove (first (.querySelectorAll js/document (str ".main-item[data-page-no=\"" no "\"]"))) "hidden")
+  (fadein (first (.querySelectorAll js/document (str ".main-item[data-page-no=\"" no "\"]")))))
 
 (defn change-page [event]
   (let [no (.-no (.-dataset (.-currentTarget event)))]
-    (hide-all-elements (.getElementsByClassName js/document "main main-item"))
-    (hide-all-projects (.getElementsByClassName js/document "main main-project"))
+    (hide-all-elements (.getElementsByClassName js/document "main-item"))
+    ;(hide-all-projects (.getElementsByClassName js/document "main main-project"))
     (highlight-menu no)
     (open-page no)))
 
@@ -54,13 +54,13 @@
 (defn change-proj [event]
   (let [no (.-proj (.-dataset (.-currentTarget event)))]
     (hide-all-elements (.getElementsByClassName js/document "main main-item"))
-    (hide-all-projects (.getElementsByClassName js/document "main main-project"))
+    ;(hide-all-projects (.getElementsByClassName js/document "main main-project"))
     (show-proj no)))
 
 (defn back-from-proj [event]
   (let [no (.-inProjNo (.-dataset (.-currentTarget event)))]
     (hide-all-elements (.getElementsByClassName js/document "main main-item"))
-    (hide-all-projects (.getElementsByClassName js/document "main main-project"))
+    ;(hide-all-projects (.getElementsByClassName js/document "main main-project"))
     (highlight-menu no)
     (open-page no)))
 
@@ -72,12 +72,13 @@
   (add-event (second (rest menu-items)) (.-CLICK events/EventType) change-page)
   (add-event (last menu-items) (.-CLICK events/EventType) change-page)
 
-  (add-event (first project-items) (.-CLICK events/EventType) change-proj)
-  (add-event (second project-items) (.-CLICK events/EventType) change-proj)
-  (add-event (last project-items) (.-CLICK events/EventType) change-proj)
-
-  (add-event (first project-back-buttons) (.-CLICK events/EventType) back-from-proj)
-  (add-event (second project-back-buttons) (.-CLICK events/EventType) back-from-proj)
-  (add-event (last project-back-buttons) (.-CLICK events/EventType) back-from-proj))
+  ;(add-event (first project-items) (.-CLICK events/EventType) change-proj)
+  ;(add-event (second project-items) (.-CLICK events/EventType) change-proj)
+  ;(add-event (last project-items) (.-CLICK events/EventType) change-proj)
+  ;
+  ;(add-event (first project-back-buttons) (.-CLICK events/EventType) back-from-proj)
+  ;(add-event (second project-back-buttons) (.-CLICK events/EventType) back-from-proj)
+  ;(add-event (last project-back-buttons) (.-CLICK events/EventType) back-from-proj)
+  )
 
 (dom-classlist/add (first (.getElementsByTagName js/document "body")) "loaded")

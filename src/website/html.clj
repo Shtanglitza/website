@@ -46,73 +46,68 @@
      [:head
       [:title "Shtanglitza"]
       [:meta {:charset "utf-8"}]
-      [:link {:rel "stylesheet" :href "./css/style.css"}]]
+      [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
+      [:link {:rel "stylesheet" :href "./css/style.css"}]
+      [:link {:href "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" :rel "stylesheet" :integrity "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" :crossorigin "anonymous"}]]
      [:body
-      [:div {:class "main-wrap"}
-       [:div]
-       [:div {:class "menu"}
-        (menu-item 1 "selected menu-item-link" "01" "shtanglitza" "d.o.o.")
-        (menu-item 2 "menu-item-link" "02" "technology" "used")
-        (menu-item 3 "menu-item-link" "03" "projects" "finished")
-        (menu-item 4 "menu-item-link" "04" "team" "members")]
-       [:div {:class "main main-item" :id "desc" :data-page-no "1"}
-        [:div {:class "desc"}
-         [:div {:class "desc-container"}
-          [:div {:class "desc-item-top"}
-           [:div {:class "desc-item-top-left"}
-            [:h1 {:class "desc-item-top-left-h1"} "we are..."]]
-           [:div {:class "desc-item-top-right"}
-            [:p {:class "desc-item-top-right-top"} "...becoming..."]
-            [:p {:class "desc-item-top-right-bottom"} "...something something something"]]]
-          [:div {:class "desc-item-bottom"}
-           [:div {:class "desc-item-bottom-item"}
-            [:div {:class "desc-1"}
-             [:h2 {:class "desc-1-h2"}
-              "01 - Something"]
-             [:p {:class "desc-1-p"}
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-              ]]]]]]]
-       [:div {:class "main main-item hidden" :id "desc" :data-page-no "2"}
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        ]
-       [:div {:class "main main-item hidden" :id "projects" :data-page-no "3"}
-        [:div {:class "projects"}
-         (project-item 1 "01" "ostrozub" "2020" "Product" "Email processing software")
-         (project-item 2 "02" "osm-ifc" "2020" "Product" "Osm to ifc processing software")
-         (project-item 3 "03" "Website" "2021" "Website" "Shtanglitza official website")]]
-       [:div {:class "main main-project hidden" :id "ostrozub" :data-proj-no "1"}
-        [:div {:class "projects"}
-         (project-item-as-header "01" "ostrozub" "2020" "Product" "Email processing software" (back-button 3)
-                                 [:div {:class ""}
-                                  [:div {:class ""}
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                   ]
-                                  [:div {:class ""}
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                   ]])]]
-       [:div {:class "main main-project hidden" :id "ostrozub" :data-proj-no "2"}
-        [:div {:class "projects"}
-         (project-item-as-header "02" "osm-ifc" "2020" "Product" "Osm to ifc processing software" (back-button 3)
-                                 [:div {:class ""}
-                                  [:div {:class ""}
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                   ]
-                                  [:div {:class ""}
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                   ]])]]
-       [:div {:class "main main-project hidden" :id "ostrozub" :data-proj-no "3"}
-        [:div {:class "projects"}
-         (project-item-as-header "03" "website" "2021" "Website" "Shtanglitza official website" (back-button 3)
-                                 [:div {:class ""}
-                                  [:div {:class ""}
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                   ]
-                                  [:div {:class ""}
-                                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                   ]])]]
-       [:div {:class "main main-item hidden" :id "team" :data-page-no "4"}
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        ]]]
+      [:div {:class "container-fluid"}
+       [:div {:class "row justify-content-evenly"}
+        [:div {:class "col-xl-4 col-12 menu"}
+         (menu-item 1 "selected menu-item-link" "01" "shtanglitza" "d.o.o.")
+         (menu-item 2 "menu-item-link" "02" "expertise" "used")
+         ;(menu-item 3 "menu-item-link" "03" "projects" "finished")
+         (menu-item 4 "menu-item-link" "03" "team" "members")]
+        [:div {:class "col-xl-8 col-12 main-item" :id "desc" :data-page-no "1"}
+         [:div {:class "desc"}
+          [:div {:class "desc-container"}
+           [:div {:class "desc-item-top"}
+            [:div {:class "desc-item-top-left"}
+             [:h1 {:class "desc-item-top-left-h1"} "we are..."]]
+            [:div {:class "desc-item-top-right"}
+             [:p {:class "desc-item-top-right-top"} "...becoming..."]
+             [:p {:class "desc-item-top-right-bottom"} "...something something something"]]]
+           [:div {:class "desc-item-bottom"}
+            [:div {:class "desc-item-bottom-item"}
+             [:div {:class "desc-1"}
+              [:h2 {:class "desc-1-h2"}
+               "01 - Something"]
+              [:p {:class "desc-1-p"}
+               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+               ]]]]]]]
+        [:div {:class "col-xl-8 col-12 main-item" :id "desc" :data-page-no "2"}
+         [:div {:class "desc"}
+          [:div {:class "desc-container"}
+           [:div {:class "desc-item-top"}
+            [:div {:class "desc-item-top-left"}
+             [:h1 {:class "desc-item-top-left-h1"} "we are..."]]
+            [:div {:class "desc-item-top-right"}
+             [:p {:class "desc-item-top-right-top"} "...becoming..."]
+             [:p {:class "desc-item-top-right-bottom"} "...something something something"]]]
+           [:div {:class "desc-item-bottom"}
+            [:div {:class "desc-item-bottom-item"}
+             [:div {:class "desc-1"}
+              [:h2 {:class "desc-1-h2"}
+               "02 - Something"]
+              [:p {:class "desc-1-p"}
+               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+               ]]]]]]]
+        [:div {:class "col-xl-8 col-12 main-item" :id "desc" :data-page-no "4"}
+         [:div {:class "desc"}
+          [:div {:class "desc-container"}
+           [:div {:class "desc-item-top"}
+            [:div {:class "desc-item-top-left"}
+             [:h1 {:class "desc-item-top-left-h1"} "we are..."]]
+            [:div {:class "desc-item-top-right"}
+             [:p {:class "desc-item-top-right-top"} "...becoming..."]
+             [:p {:class "desc-item-top-right-bottom"} "...something something something"]]]
+           [:div {:class "desc-item-bottom"}
+            [:div {:class "desc-item-bottom-item"}
+             [:div {:class "desc-1"}
+              [:h2 {:class "desc-1-h2"}
+               "03 - Something"]
+              [:p {:class "desc-1-p"}
+               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+               ]]]]]]]]]]
      [:div {:id "loader-wrapper"}
       [:div {:id "loader"}]
       [:div {:class "loader-section section-left"}]
